@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da forca</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1 id="tituloPag">Acerte a palavra Secreta</h1>
+    <div class="container">
+        <div class="textos">
+            <h3>Digite a palavra secreta:</h3>
+            <input type="password" id="segredo" onkeyup="habilitarBtInicio()">
+            <button id="btInicia" disabled onclick="iniciarJogo()">Iniciar o Jogo</button>
+            <h3>Digite uma letra:</h3>
+            <input type="text" id="tentativa" maxlength="1" >
+            <button id="btVerifica" disabled onclick="verificaLetra()">Confirma</button>
+            <h1 id="painel"></h1>
+            <h1>Erros: </h1>
+            <h1 id="erradas">_</h1>
+            <button id="reset" hidden onclick="reiniciaJogo()">Reiniciar Jogo</button>
+        </div>
+
+        <div class="desenho">
+            <img id="image" src="imagens/1.png" alt="">
+        </div>
+
+    </div>
+
+</body>
+</html>
